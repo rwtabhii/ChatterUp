@@ -1,11 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>ChatterApp</title>
 </head>
+
 <body>
-    
+    <div id="promt">
+        <form id="my-prompt">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required placeholder="Enter your name..." />
+            </div>
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+    <div class="chat-container">
+
+        <!-- whole chat view  -->
+        <div class="chat-view">
+            <!-- chat header that welcome the member and tell us who is typing -->
+            <div class="chat-header">
+                <div id="welcome-msg">
+                    <span id="green-dot"></span>
+                </div>
+                <div id="typing-member">
+
+                </div>
+            </div>
+            <!-- this contain the actual all text messages  -->
+            <div class="chat-text-view">
+               <!-- <div id="user-left">user is disconnected</div> -->
+                <!-- Sender message -->
+                <!-- <div class="chat-message sender">
+                    <span class="profile-icon" id="sender-profile">
+                        <img src="./images/sender profile.jpg" alt="sender">
+                    </span>
+                    <div class="message-bubble" id="sender-data">
+                        <span class="name">coding ninjas</span>
+                        <p class="message-text">Hello, learner!</p>
+                        <span class="timestamp">02:01</span>
+                    </div>  
+                </div> -->
+
+                <!-- Receiver message 
+                <div class="chat-message receiver">
+                    <span class="profile-icon" id="reciever-profile">
+                        <img src="./images/reciever profile.jpg" alt="receiver">
+                    </span>
+                    <div class="message-bubble" id="reciever-data">
+                        <span class="name">arnav</span>
+                        <p class="message-text">I am Arnav Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
+                            eum possimus, sunt dolore soluta ipsa commodi consectetur quia, eius vero facere! Explicabo
+                            animi rem obcaecati magnam pariatur odit molestias totam.from Gurgaon, and I also aspire to
+                            becom Lorem, ipsum dolor
+                            sit amet consectetur adipisicing elit. Repellendus eveniet ipsum ducimus. a software
+                            engineer.</p>
+                        <span class="timestamp">02:10</span>
+                    </div>
+                </div>  -->
+            </div>
+
+
+
+            <!-- this contain the user write text container and send button -->
+            <div class="send-text">
+                <form id="message-form">
+                    <input type="text" id="message-input" placeholder="Type your message" required>
+                    <button type="submit" id="send-msg">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="online-member">
+            <div id="users-connections">
+                Connected Users <span id="online-user-count"></span>
+            </div>
+            <!-- <div class="user-connected">
+                Connected Users
+            </div> -->
+        </div>
+    </div>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+
 </body>
+
 </html>
