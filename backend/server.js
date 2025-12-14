@@ -89,7 +89,7 @@ io.on("connection", (socket) => {
 
 // server listening port 
 
-server.listen(env.port, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log("Server is listening");
     createDbConnection();
 
